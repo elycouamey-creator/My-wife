@@ -3,32 +3,32 @@
    Modifie juste les textes entre guillemets, sans toucher au reste.
    ================================================================ */
 
-const PRENOM = "Mon amour";
+const PRENOM = "Esther";
 
 const QUESTIONS = [
   {
-    question: "Quel jour on s'est connus ?",
-    options: ["Un lundi pluvieux", "Un jour qui a tout changé", "Je ne m'en souviens plus"],
+    question: "Esther, quand t'as faim, tu fais quoi avec ton visage ?",
+    options: ["Tu souris gentiment", "Tu serres ton visage mode 'Tchai' 😂", "Tu restes parfaitement zen"],
     correcte: 1
   },
   {
-    question: "Mon plat préféré que tu me fais, c'est...",
-    options: ["À compléter", "À compléter", "À compléter"],
-    correcte: 0
+    question: "Dôkôkounou ou Bubble Tea ?",
+    options: ["Dôkôkounou, sans débat", "Bubble Tea, sans débat", "Les deux, impossible de choisir"],
+    correcte: 2
   },
   {
-    question: "Ce que je préfère chez toi, c'est...",
-    options: ["Ton sourire", "Ton rire", "Tout, en vrai 💜"],
+    question: "Qui a toujours raison dans nos petites embrouilles ?",
+    options: ["Toi, évidemment", "Moi, clairement", "On va dire... personne 😅"],
     correcte: 2
   }
 ];
 
-const EMOJIS_MEMORY = ["💜", "🌙", "⭐", "🦋", "🌸", "🔥"];
+const EMOJIS_MEMORY = ["💜", "🧋", "🌙", "😂", "⭐", "🔥"];
 
 const MESSAGES_SECRETS = [
-  "Depuis que tu es là, mes journées ont une autre couleur. 💜",
-  "Tu ne t'en rends peut-être pas compte, mais tu m'inspires tous les jours.",
-  "Ce petit site, c'est juste pour te faire sourire un instant. Ça a marché ? 😊"
+  "Esther, le jour où tu serres ton visage parce que t'as faim restera officiellement l'image la plus mignonne et la plus chaotique que je connaisse. 😂",
+  "Dôkôkounou ou Bubble Tea... un jour il faudra trancher. En attendant, je crois que je t'aime autant que toi t'aimes les deux.",
+  "Bref, je voulais juste te dire un truc random : t'es la meilleure, même (surtout) quand tu fais ta tête de 'Tchai'."
 ];
 
 const VIDEOS = [
@@ -36,7 +36,7 @@ const VIDEOS = [
   // "video2.mp4",
 ];
 
-const TEXTE_SURPRISE = "Je t'invite à un rendez-vous rien que pour nous deux... 💫\nSamedi, 19h, à notre endroit préféré.";
+const TEXTE_SURPRISE = "Esther, mission accomplie : t'as survécu au quiz, au jeu des cœurs, au memory ET à mes messages bizarres. 🏆\nEn vrai, j'avais juste envie de te faire sourire un peu.\nSamedi, 19h, à notre endroit préféré... et je t'achète du Dôkôkounou (ou un Bubble Tea, selon ton humeur du jour). 😄";
 
 const NUMERO_TEL = ""; // exemple : "+2250000000000"
 const LIEN_WHATSAPP = ""; // exemple : "https://wa.me/2250000000000"
