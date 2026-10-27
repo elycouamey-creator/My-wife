@@ -30,8 +30,9 @@ const MESSAGES_SECRETS = [
   "T'es forte en vrai, même si je te le dis pas souvent. Et t'es une bonne grande sœur : tu seras une maman adorable ❤️",
   "J'aime tes fossettes en vrai 🤭"
 ];
-const PHOTO_ESTHER = ""; // nom du fichier de sa photo, ex : "esther.jpg"
-const VIDEO_DANSE = ""; // nom du fichier de sa vidéo qui danse, ex : "danse.mp4"
+const PHOTO_ESTHER = "07f14495-81f3-4014-9bbe-e286469a24cf.jpeg";
+const VIDEO_DANSE_1 = "73a315d7-7f70-4a56-94fc-f4c0568770d3.mp4";
+const VIDEO_DANSE_2 = "6b7cda09-7f93-4ccc-8ceb-a578db49af78.mp4";
 const TEXTE_SURPRISE = "Esther, t'as survécu au quiz, au jeu des cœurs, au memory ET à mes messages bizarres. 🏆\nMais en vrai, je voulais juste te dire : je t'aime.\nT'es forte, courageuse, et je suis fier de toi, même dans les jours difficiles.\nEt pour te faire rire un peu plus... 👇";
  
 
@@ -268,6 +269,30 @@ function revelerSurprise() {
   contenu.classList.add("visible");
   document.getElementById("texte-surprise").innerHTML = TEXTE_SURPRISE.replace(/\n/g, "<br>");
 
+  const photo = document.getElementById("photo-surprise");
+  if (PHOTO_ESTHER) {
+    photo.src = PHOTO_ESTHER;
+    photo.style.display = "block";
+  } else {
+    photo.style.display = "none";
+  }
+
+  const video1 = document.getElementById("video-surprise-1");
+  if (VIDEO_DANSE_1) {
+    video1.src = VIDEO_DANSE_1;
+    video1.style.display = "block";
+  } else {
+    video1.style.display = "none";
+  }
+
+  const video2 = document.getElementById("video-surprise-2");
+  if (VIDEO_DANSE_2) {
+    video2.src = VIDEO_DANSE_2;
+    video2.style.display = "block";
+  } else {
+    video2.style.display = "none";
+  }
+}
   const photo = document.getElementById("photo-surprise");
   if (PHOTO_ESTHER) {
     photo.src = PHOTO_ESTHER;
