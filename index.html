@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Miss Mystère 💜</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="fond-etoiles"></div>
+
+<div id="app">
+  <div class="barre-progres"><span id="barre"></span></div>
+
+  <!-- 0. Accueil mystérieux -->
+  <section class="ecran actif" data-ecran="0">
+    <div class="coeur-pulse">💜</div>
+    <h1 class="titre-principal">Miss Mystère</h1>
+    <p class="sous-titre">Un petit chemin secret t'attend... réponds, joue, débloque, et découvre où il te mène. 🌙</p>
+    <button class="bouton" onclick="allerA(1)">Entrer dans le mystère ✨</button>
+  </section>
+
+  <!-- 1. Quiz -->
+  <section class="ecran" data-ecran="1">
+    <h2 class="titre-ecran">Nous deux 💭</h2>
+    <div class="quiz-carte" id="zone-quiz"></div>
+    <p class="quiz-message" id="quiz-message"></p>
+    <button class="bouton" id="bouton-suite-quiz" style="display:none" onclick="allerA(2)">Continuer →</button>
+  </section>
+
+  <!-- 2. Jeu des coeurs -->
+  <section class="ecran" data-ecran="2">
+    <h2 class="titre-ecran">Attrape les cœurs 💗</h2>
+    <div class="jeu-infos">
+      <span>Cœurs : <span id="jeu-score">0</span>/<span id="jeu-objectif">8</span></span>
+      <span>Temps : <span id="jeu-temps">20</span>s</span>
+    </div>
+    <div class="zone-jeu" id="zone-jeu"></div>
+    <button class="bouton" id="bouton-rejouer-jeu" onclick="demarrerJeuCoeurs()">Lancer le jeu 💓</button>
+    <button class="bouton" id="bouton-suite-jeu" style="display:none" onclick="allerA(3)">Continuer →</button>
+  </section>
+
+  <!-- 3. Memory -->
+  <section class="ecran" data-ecran="3">
+    <h2 class="titre-ecran">Petit memory 🧠💗</h2>
+    <div class="grille-memory" id="grille-memory"></div>
+    <button class="bouton" id="bouton-suite-memory" style="display:none" onclick="allerA(4)">Continuer →</button>
+  </section>
+
+  <!-- 4. Messages secrets -->
+  <section class="ecran" data-ecran="4">
+    <h2 class="titre-ecran">Messages secrets 🔐</h2>
+    <div class="liste-messages" id="liste-messages"></div>
+    <button class="bouton" id="bouton-suite-messages" style="display:none" onclick="allerA(5)">Continuer →</button>
+  </section>
+
+  <!-- 5. Galerie vidéos -->
+  <section class="ecran" data-ecran="5">
+    <h2 class="titre-ecran">Nos souvenirs 🎥</h2>
+    <div class="grille-videos" id="grille-videos"></div>
+    <p class="note">Si tu ne vois rien ici, c'est qu'il faut encore ajouter les vidéos (voir les instructions).</p>
+    <button class="bouton" onclick="allerA(6)">Continuer →</button>
+  </section>
+
+  <!-- 6. Surprise finale -->
+  <section class="ecran" data-ecran="6">
+    <div id="avant-surprise">
+      <div class="coeur-pulse">🎁</div>
+      <h2 class="titre-ecran">Une dernière chose...</h2>
+      <button class="bouton" onclick="revelerSurprise()">Clique ici 💫</button>
+    </div>
+    <div class="surprise-contenu" id="surprise-contenu">
+      <p class="surprise-texte" id="texte-surprise"></p>
+      <div class="actions-finales" id="actions-finales"></div>
+    </div>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
