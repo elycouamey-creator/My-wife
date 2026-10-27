@@ -26,17 +26,14 @@ const QUESTIONS = [
 const EMOJIS_MEMORY = ["💜", "🧋", "🌙", "😂", "⭐", "🔥"];
 
 const MESSAGES_SECRETS = [
-  "Esther, le jour où tu serres ton visage parce que t'as faim restera officiellement l'image la plus mignonne et la plus chaotique que je connaisse. 😂",
-  "Dôkôkounou ou Bubble Tea... un jour il faudra trancher. En attendant, je crois que je t'aime autant que toi t'aimes les deux.",
-  "Bref, je voulais juste te dire un truc random : t'es la meilleure, même (surtout) quand tu fais ta tête de 'Tchai'."
+  "Je sais que tu m'aimes, mais tu te rejettes toujours... moi par contre, je suis fan. Donc Tchai 😌",
+  "T'es forte en vrai, même si je te le dis pas souvent. Et t'es une bonne grande sœur : tu seras une maman adorable ❤️",
+  "J'aime tes fossettes en vrai 🤭"
 ];
-
-const VIDEOS = [
-  // "video1.mp4",
-  // "video2.mp4",
-];
-
-const TEXTE_SURPRISE = "Esther, mission accomplie : t'as survécu au quiz, au jeu des cœurs, au memory ET à mes messages bizarres. 🏆\nEn vrai, j'avais juste envie de te faire sourire un peu.\nSamedi, 19h, à notre endroit préféré... et je t'achète du Dôkôkounou (ou un Bubble Tea, selon ton humeur du jour). 😄";
+const PHOTO_ESTHER = ""; // nom du fichier de sa photo, ex : "esther.jpg"
+const VIDEO_DANSE = ""; // nom du fichier de sa vidéo qui danse, ex : "danse.mp4"
+const TEXTE_SURPRISE = "Esther, t'as survécu au quiz, au jeu des cœurs, au memory ET à mes messages bizarres. 🏆\nMais en vrai, je voulais juste te dire : je t'aime.\nT'es forte, courageuse, et je suis fier de toi, même dans les jours difficiles.\nEt pour te faire rire un peu plus... 👇";
+ 
 
 const NUMERO_TEL = ""; // exemple : "+2250000000000"
 const LIEN_WHATSAPP = ""; // exemple : "https://wa.me/2250000000000"
@@ -265,19 +262,26 @@ function afficherVideos() {
     grille.appendChild(carte);
   });
 }
-
 function revelerSurprise() {
   document.getElementById("avant-surprise").style.display = "none";
   const contenu = document.getElementById("surprise-contenu");
   contenu.classList.add("visible");
   document.getElementById("texte-surprise").innerHTML = TEXTE_SURPRISE.replace(/\n/g, "<br>");
 
-  const actions = document.getElementById("actions-finales");
-  actions.innerHTML = "";
-  if (NUMERO_TEL) {
-    actions.innerHTML += '<a class="bouton" href="tel:' + NUMERO_TEL + '">M\'appeler 📞</a>';
+  const photo = document.getElementById("photo-surprise");
+  if (PHOTO_ESTHER) {
+    photo.src = PHOTO_ESTHER;
+    photo.style.display = "block";
+  } else {
+    photo.style.display = "none";
   }
-  if (LIEN_WHATSAPP) {
-    actions.innerHTML += '<a class="bouton bouton-fantome" href="' + LIEN_WHATSAPP + '" target="_blank" rel="noopener">M\'écrire sur WhatsApp 💬</a>';
+
+  const video = document.getElementById("video-surprise");
+  if (VIDEO_DANSE) {
+    video.src = VIDEO_DANSE;
+    video.style.display = "block";
+  } else {
+    video.style.display = "none";
   }
+}
 }
