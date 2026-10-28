@@ -293,20 +293,4 @@ function revelerSurprise() {
     video2.style.display = "none";
   }
 }
-  const photo = document.getElementById("photo-surprise");
-  if (PHOTO_ESTHER) {
-    photo.src = PHOTO_ESTHER;
-    photo.style.display = "block";
-  } else {
-    photo.style.display = "none";
-  }
-
-  const video = document.getElementById("video-surprise");
-  if (VIDEO_DANSE) {
-    video.src = VIDEO_DANSE;
-    video.style.display = "block";
-  } else {
-    video.style.display = "none";
-  }
-}
-}
+  
